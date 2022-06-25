@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 1</title>
+</head>
+<body>
+    
+    <script>
+
+//  Nesse desafio, você irá solicitar ao usuário que ele insira  dois números e, a partir daí, calcular:
+
+// -[]  A soma dos dois números;
+// -[]  A subtração dos dois números;
+// -[]  A multiplicação dos dois números;
+// -[]  A divisão dos dois números;
+// -[]  O resto da divisão dos dois números;
+// Fácil até aqui, né ? Bora se desafiar ? 
+
+//  -[]  Verifique se a soma dos dois números é par ~~(ou ímpar) ~~;
+//  -[]  Verifique se os dois números inseridos são iguais ~~(ou diferentes) ~~.
+
+
+
+        function checkEqualNumbers(numberOne, numberTwo) {
+            equalityNumbers = numberOne === numberTwo
+            equalityNumbers ? alert('Números são iguais') : alert('Números não são iguais')  
+            return
+        }
+
+        function checkEvenNumber(numbersPair) {
+            let soma = numberOne + numberTwo
+            numbersPair = soma % 2 == 0
+            numbersPair ? alert('Esté é um número par') : alert('Este é um número ímpar')
+            return
+        }
+
+        let numberOne = Number(prompt("Digite o primeiro número"))
+        let numberTwo = Number(prompt("Digite o segundo número"))
+
+        checkEqualNumbers(numberOne, numberTwo)
+
+        let soma = numberOne + numberTwo
+        checkEvenNumber(soma)
+
+        let sub = numberOne - numberTwo
+        let mult = numberOne * numberTwo
+        let div = numberOne / numberTwo
+        let modulo = numberOne % numberTwo
+
+        alert(`o resultado da soma é ${soma}`)
+        alert(`o resultado da subtração é ${sub}`)
+        alert(`o resultado da multiplicação é ${mult}`)
+        alert(`o resultado da divisão é ${div}`)
+        alert(`o resto da divisão é ${modulo}`)
+
+
+
+    </script>
+</body>
+</html>
