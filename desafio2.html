@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let students = [
+            {
+                name: 'Antonio',
+                firstNote: 6,
+                secondNote: 9,
+            },
+
+            {
+                name: 'Debora',
+                firstNote: 6,
+                secondNote: 7,
+            },
+
+            {
+                name: 'Thiago',
+                firstNote: 8,
+                secondNote: 7,
+            },
+        ]
+
+        function testResult(average, name) {
+            let expectedAverage = 7
+            if (average >= 7) {
+                return `Parabéns, ${name}! você foi aprovado no(a) concurso` 
+            } else {
+                return `\nNão foi dessa vez, ${name}! tente novamente!`
+            }
+        }
+
+
+        function averageCalculate(firstNote, secondeNote) {
+            return (firstNote + secondeNote) / 2
+
+        }
+
+        function printStudent(student) {
+            let result = averageCalculate(student.firstNote, student.secondNote) 
+            let nameOfStudent = student.name
+            return `A média do(a) aluno(a) ${nameOfStudent} é: ${result}                                                ${testResult(result, nameOfStudent) }
+            `            
+        }
+
+        for (let student of students) {
+            let averageMsg = printStudent(student)
+            alert(averageMsg)
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
